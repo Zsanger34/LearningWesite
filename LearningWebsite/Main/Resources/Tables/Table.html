@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tables</title>
+</head>
+<body>
+<h2>Basic Table Structure</h2>
+<table>
+    <tr> <! Table Row>
+        <th></th> <! Table Headings Scope is just where you want it>
+        <th scope="col">Column 1</th>
+        <th scope="col">Column 2</th>
+        <th scope="col">Column 3</th>
+    </tr>
+    <tr>
+        <th scope="row">Row 1</th>
+        <td>12</td><! Row Cell>
+        <td>53</td>
+        <td>342</td>
+    </tr>
+    <tr>
+        <th scope="row">Row 2</th>
+        <td>23</td>
+        <td>353</td>
+        <td>243</td>
+    </tr>
+</table>
+<h2>Spanning Columns</h2>
+<table>
+    <tr>
+        <th></th>
+        <th scope="col">Column 1</th>
+        <th scope="col">Column 2</th>
+        <th scope="col">Column 3</th>
+    </tr>
+    <tr>
+        <th scope="row">Row 1</th>
+        <td colspan="2">12</td><! Row Cell>
+        <td>342</td>
+    </tr>
+    <tr>
+        <th scope="row">Row 2</th>
+        <td>23</td>
+        <td colspan="2">353</td>
+
+    </tr>
+</table>
+<h2>Spanning Rows</h2>
+<table>
+    <tr>
+        <th></th>
+        <th scope="col">Column 1</th>
+        <th scope="col">Column 2</th>
+        <th scope="col">Column 3</th>
+    </tr>
+    <tr>
+        <th scope="row">Row 1</th>
+        <td rowspan="2">12</td><! Row Cell>
+        <td>53</td>
+        <td>342</td>
+    </tr>
+    <tr>
+        <th scope=row">Row 2</th>
+        <td>23</td>
+        <td rowspan="2">353</td>
+        <td>243</td>
+    </tr>
+</table>
+<h2> Long Tables</h2>
+<table>
+    <thead>
+    <tr>
+        <th> Date</th>
+        <th> Income</th>
+        <th> Expenditure</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <th>3st Jan</th>
+        <td>320</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <th>4st Jan</th>
+        <td>942</td>
+        <td>32</td>
+    </tr>
+    <tr>
+        <th>9st Jan</th>
+        <td>3210</td>
+        <td>63</td>
+    </tr>
+
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td></td>
+        <td>Value</td>
+        <td>Value</td>
+    </tr>
+    </tfoot>
+</table>
+
+<h2>Width and Spacing</h2>
+<table width="400" cellpadding="10">
+    <tr> <! Table Row>
+        <th></th> <! Table Headings Scope is just where you want it>
+        <th scope="col">Column 1</th>
+        <th scope="col">Column 2</th>
+        <th scope="col">Column 3</th>
+    </tr>
+    <tr>
+        <th scope="row">Row 1</th>
+        <td>12</td><! Row Cell>
+        <td>53</td>
+        <td>342</td>
+    </tr>
+    <tr>
+        <th scope="row">Row 2</th>
+        <td>23</td>
+        <td>353</td>
+        <td>243</td>
+    </tr>
+</table>
+<h2>Border and Background</h2>
+<table border ="2" bgcolor="#efefef">
+    <tr> <! Table Row>
+        <th></th> <! Table Headings Scope is just where you want it>
+        <th scope="col">Column 1</th>
+        <th scope="col">Column 2</th>
+        <th scope="col">Column 3</th>
+    </tr>
+    <tr>
+        <th scope="row">Row 1</th>
+        <td>12</td><! Row Cell>
+        <td>53</td>
+        <td>342</td>
+    </tr>
+    <tr>
+        <th scope="row">Row 2</th>
+        <td>23</td>
+        <td>353</td>
+        <td>243</td>
+    </tr>
+</table>
+
+
+
+
+
+</body>
+</html>
