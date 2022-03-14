@@ -44,12 +44,115 @@
         an example is
         <iframe width="450" height="350" src="https://maps.google.com/maps?q=suny%20buffalo&t=&z=13&ie=UTF8&iwloc=&output=embed"> </iframe>
 
-        <h2>meta</h2>
+        <h2>Meta</h2>
+        The Meta Element lives inside the <.head> element. It contains information about that web page
+        its invisible and only there to talk to the search engine.
+        it contains infomation like who created the page, if its time sensitive(The page can expire in that case)
+        the meta tag is an empty element so it does not have a closing tag
+        some of the most commonly used attributes are
+        <ul>
+            <li>
+                Description: Contains a description of the page it tells the search engine what the website is about.
+                This should be a maximum of 155 characters
+                It is sometimes displayed in the search engine results
+            </li>
+            <li>
+                Keywords: List of comma-separated words that a user might search on to find the page.
+                This no longer really effects on how search engines index the site
+            </li>
+            <li>
+                Robots: This tell the search engine is it should add the page to their search results or not
+                if you choose to you can use http-equiv
+            </li>
+            <li>
+                Author: Defines who the author of the web page is
+            </li>
+            <li>
+                Pragma: This prevents the website for matching the page (Soring it locally to save time downloading it on subsequent visits)
+            </li>
+            <li>
+                Expires: Tell the broswers how long to cache the site till is expires the cache
+            </li>
+        </ul>
+        Example of a Meta tag
+
+        <.!DOCTYPE html>
+        <.html>
+        <.head>
+            <.title>Information About Your Page<./title>
+            <.meta name="description"
+                  content="Ub Course Review"/>
+            <.meta name="keywords"
+                  content="Ub, College, Food"/>
+            <.meta name="robots"
+                  content="nofollow"/>
+            <.meta http-equiv="author"
+                  content="Zac Sanger"/>
+            <.meta http-equiv="pragma"
+                  content="no=cache"/>
+            <.meta http-equiv="expires"
+                  content="Wed, 08, Mar 2023 23:59:59:59 GMT" />
+        <./head>
+        <.body>
+        <./.body>
+        <./html>
+
+    <h2>Escape Characters</h2>
+    To do special character that html uses you need these codes:
+    Less-Than sign:
+    &lt;
+    &#60;
+    Greater-Than sign:
+    &gt;
+    &#62;
+    Apersand:
+    &and;
+    &#38;
+    Quotation mark:
+    &quot;
+    &#34;
+    Cent sign:
+    &cent;
+    &#162;
+    Pound sign:
+    &pound;
+    &#163;
+    Yen sign:
+    &yen;
+    &#165;
+    Euro:
+    &euro;
+    &#8364;
+    Copyright symbol:
+    &copy;
+    &#169;
+    Registered trademark:
+    &reg;
+    &#174;
+    Trademark:
+    &trade;
+    &#8482;
+    Left single quote:
+    &lsquo;
+    &#8216;
+    Right single quote:
+    &rsquo;
+    &#8217;
+    Left double quotes:
+    &ldquo;
+    &#8220;
+    Right double quotes:
+    &rdquo;
+    &#8221;
+    Multiplication sign:
+    &times;
+    &#215;
+    Division sign:
+    &divide;
+    &#247;
 
     </p>
 
 </head>
-<body>
 
-</body>
 </html>
