@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro to CSS</title>
+    <link href="Color.css" rel="stylesheet">
+    <link href="Texts.css" rel="stylesheet">
+</head>
+<body>
+<p>
+Welcome to CSS. You use CSS, so you can choose how the website looks. Just a description<br />
+HTML is the structure<br />
+CSS is the appearance<br />
+Javascript is the backbone <br />
+can be really anything you want <br />
+
+<h2>CSS Rule has 2 part:</h2>
+Selector {Declaration} <br />
+p     {font=family: Arial;}<br />
+Property  : value
+
+<h2>Using External Css:</h2>
+Using <.link> in your html it will tell the browser where to find the css file for that part of code<br />
+Link consists of<br />
+<.link> href="Dir" type="text/css" rel="stylesheet" /><br />
+Href: Selects path to css file<br />
+Type: specifies the type of doc being linked for css you use text/css<br />
+Rel: Specifies the relationship between the page and file it is linked to<br />
+
+<h2>Using internal Css: </h2>
+Using <.style> you can implement css in to your html file within the file<br />
+Style consists of: <br />
+<.style type="text/css"><br />
+<./style><br />
+<h2>Selectors</h2>
+<ul>
+    <li>Universal Selectors
+    <dl>
+        <dt>Applies to all elements in the document</dt>
+        <dd>*{} -Targets all Elements on the page</dd>
+    </dl>
+    </li>
+    <li>Type Selector
+        <dl>
+            <dt>Matches element names</dt>
+            <dd>h1, h2, h3 {} -Targets the <.h1>, <.h2> and <.h3> elements</dd>
+        </dl>
+    </li>
+    <li>Class Selector
+        <dl>
+            <dt>Matches an element whose class attribute has a value that matches the one specified after the period symbol</dt>
+            <dd>.note{} -Targets any element whose class attribute has a value of note</dd>
+            <dd>p.note {} -Targets only <.p> elements wjpse class attribute has a value of note</dd>
+        </dl>
+    </li>
+    <li>Id Selector
+        <dl>
+            <dt>Matches an element whose id attribute has a value that matches the one specified after the pound or hash symbol</dt>
+            <dd>#introduction{}-Targets the element whose id attribute has a value of introduction</dd>
+        </dl>
+    </li>
+    <li>Child Selector
+        <dl>
+            <dt>Matches an element that is a direct child ofo another</dt>
+            <dd>li>a {}- Target any <.a> elements that are children of an <.li> element (but not other <.a> elements in the page)</dd>
+        </dl>
+    </li>
+    <li>Descendant Selector
+        <dl>
+            <dt>Matches an element that is a descendent of another specified element (not just a direct child of that element)</dt>
+            <dd>p a {}-Targets any <.a> elements that sit inside a <.p> element, even if there are other elements nested between them</dd>
+        </dl>
+    </li>
+    <li>Adjacent Sibling Selector
+        <dl>
+            <dt>Matches an elements that is the next sibling of another</dt>
+            <dd>h1+p {} -Targets the first <.p> elements after any <.h1> elements (but not other <.p> elements)</dd>
+        </dl>
+    </li>
+    <li>General Sibling Selector
+        <dl>
+            <dt>Matches an element that is a sibling of another, although it does not have to be the directly preceding element</dt>
+            <dd> h1~p {} -If you had two <.p> elements that are siblings of an <.h1> element that are siblings of an <.h1> element, this rule would apply to both</dd>
+        </dl>
+    </li>
+</ul>
+Specificity:
+    If one selector is more specific than the others, the more specific rule will take precedence over more general ones
+
+Important:
+    you can add !important after any property value to indicate that it should be considered more important than <br />
+other rules that apply to the same element
+
+<h2>Colors:</h2>
+For colors you need a certain color id, <br />
+you can use RGB Values <br />
+Hex Codes <br />
+Color Names <br />
+For the Foreground color use {color :DarkCyan;} <br />
+<div class="col">
+<span id="backg">for Background color use {background-color: rgb(0,0,0); } </span><br />
+
+<span id="Opac">for Opacity level use {opacity: .5;}</span><br />
+
+<span id="HSL">for selecting hue(0-360), saturation(0%-100%), and lightness(0%-100%) use {background-color: hsl(0,0%,0%);}</span></span><br />
+
+<span id="HSLA">for selecting transparency(0-1.0) you can use {background-color: hsla(0,0%,0%,0.5);}</span>
+</div>
+
+
+<h2>Text:</h2>
+<h3 id="ong">Specifying Typefaces</h3>
+
+You need to use font-family:(font you picked)
+You can pick a main font but make to to choose others incase the user's browser does not have that specific dont installed <br />
+you should also end with the generic font name for said fonts<br />
+To add a custom font you can use<br />
+@font-face
+then font-face and src with src being the path to the font
+<style type="text/css">
+    #ong{
+        font-family: "Times New Roman", Times, serif;
+        }
+
+
+</style>
+
+<h3 id ="siz">Size of Text</h3>
+To change size of text you do font-size: (Then the size you want)
+you can use: dont-size:(size);
+Pixels(px)
+Percentages(%)
+EMS(em)
+<style type="text/css">
+    #siz{
+        font-size: 42px;
+        }
+    </style>
+
+<h3 >Weight of Font(Bold Text)</h3>
+This allows you to <span id="bol">make your text bold you can choose</span> in what type of bold text you want
+
+<style type="text/css">
+    #bol{
+        font-bold: black;
+        font-size: 24px;}
+</style>
+
+<h3>Font Style</h3>
+This allows you to <span id="sty">change the style</span> of your text
+
+<style>
+    #sty{
+        font-style: italic;
+    }
+</style>
+
+<h3>Text Transformation</h3>
+<span id="cas">Changes the case of a text</span>
+
+
+
+<h3 id="undline">Text Decoration</h3>
+<span id="strik">This allows you to decorate you text with things like strike through, underlines, and overlines</span>
+
+
+<h3>Line Height(Leading)</h3>
+<span id="linhe">Allows you to change the line height which is the space about each line</span>
+
+
+
+<h3 id="letre">Letter & Word Spacing</h3>
+<span id="wodre">Allows you to change the</span> spaces between letter and words
+<style>
+
+    #letre{letter-spacing: .02em;}
+    #wodre{word-spacing: 1em;}
+</style>
+
+<h3>Alignment of Text</h3>
+This section will show you how to align text<br />
+you use (text-align)<br />
+text-align: left -indicates that the text should be left-aligned<br />
+text-align: right -indicates that the text should be right-aligned<br />
+text-align: center -allows you to center text<br />
+text-align: justify -indicates that every line in a paragraph, except <br />
+the last line, should be set to take up the full width of the containing box.<br />
+For vertical alignment you use(vertical-align)<br />
+Vertical Alignment is not intended to vertically align text in th middle of block level elements such as p and div, <br />
+it does have this effect when used with table cells. its more commonly used with inline elements such as img, em, or strong <br />
+elements. Its similar to align from the HTML tags. <br />
+text-align: baseline<br />
+text-align: sub<br />
+text-align: super<br />
+text-align: top<br />
+text-align: text-top<br />
+text-align: middle<br />
+text-align: bottom<br />
+text-align: text-bottom<br />
+
+<h3><span id="ind">Indenting Text</span></h3>
+You use text-indent: (value); to indent text in a code. <br />
+you can use a negative number to push text of the browser window in cases we dont want a heading text to be seen, <br />
+you can also use a positive number to normally indent text
+
+<style type="text/css">
+    #ind{
+        text-indent: 200px;}
+</style>
+
+<h3>Shadowing Text</h3>
+To shadow a text you can use test-shadow <br />
+this can take 3 lengths and a color <br />
+<span id="sha">the first length indicates how far to the left or right the shadow should fall <br />
+the second length indicates the distance to the top or bottom that the shadow should fall <br />
+the third length is optional and specifies the amount of blur that should be applied to the drop shadow <br />
+    the fourth value is the color you want the shadow to become</span>
+
+<style>
+    #sha{
+        background-color:#eeeeee;
+        color:#666666;
+        text-shadow: 1px 1px 0px #000000;
+    }
+</style>
+<h2>Pseudo-Classes</h2>
+<h3>First Letter or Line</h3>
+These are technically pseudo-elements <br />
+To apply to specify different values for the first letter or first line using:<br />
+:first-letter <br />
+:first-line
+
+<h3>Styling Links</h3>
+Browsers tend to show links in blue with an underline by default, and change when clicked
+You can use :link to change the styles of unclicked links
+You can use :visited to change the styles of clicked links
+
+<h3>Responding to Users</h3>
+This section talks about how the website responds to users actions <br />
+:hover - Talks about when you hover over an elements on the website etc a mouse hovers over a element
+:active - This is applied when an element is being activated by a user
+:focus - This is applied when an elements has focus. Any element that you can interact with, such as a link <br />
+you can click on or any form control can have focus
+
+<h3>Attribute Selectors</h3>
+<ul>
+    <li>Existence
+        <dl>
+            <dt>[] - Matches a specific attribute</dt>
+            <dd>p[class] - Targets any <.p> elements with an attribute called class</dd>
+        </dl>
+    </li>
+    <li>Equality
+        <dl>
+            <dt>[=] - MAtches a specific attribute with a specific value</dt>
+            <dd>p[class="dog"] - Targets any <.p> element with an attribute called class whose value is dog</dd>
+        </dl>
+    </li>
+    <li>Space
+        <dl>
+            <dt>[~=] - Matches a specific attribute whose value appears in a space-seperated list of words</dt>
+            <dd>p[class~="dog"] - Targets and <.p> element with an attribute called class whose value is a list of space-separated words, one of which is dog</dd>
+        </dl>
+    </li>
+    <li>Prefix
+        <dl>
+            <dt>[^=] - Matches a specific attribute whose value begins with a specific string</dt>
+            <dd>p[attr^"d"] - Targets any <.p> element with an attribute whose value begins with the letter "d"</dd>
+        </dl>
+    </li>
+    <li>Substring
+        <dt>[*=] - Matches a specific attribute whose value contains a specific substring</dt>
+        <dd>p[attr*"do"] - Target any <.p> element with an attribute whose value contains the letters "do"</dd>
+    </li>
+    <li>Suffix
+        <dt>[$=] - Matches a specific attribute whose value ends with a specific string</dt>
+        <dd>p[attr$"g"] - Target ay <.p> element with an attribute whose value ends with the letter "g"</dd>
+    </li>
+</ul>
+
+<h2>Boxes:</h2>
+<h3>Box Dimensions</h3>
+To adjust box width and heights use
+height: x% or xPx<br />
+width:x% or xPx
+<h3> Limiting Width and Height</h3>
+min-width: xPx<br/>
+max-width: xPx<br/>
+min-height: xPx<br/>
+max-height: xPx
+
+<h3>Overflowing Content</h3>
+The overflow property tells the browser what to do if the content contained within a box is larger than the box itself <br/>
+overflow: hidden;<br/>
+overflow: scroll;
+<h3>Border Width</h3>
+the border-width property is used to control the width of a border<br/>
+you can either use<br/>
+thin<br/>
+medium<br/>
+thick<br/>
+or just Px <br/>
+There are 4 values for which borders you can adjust<br/>
+border-top-width:<br/>
+border-bottom-width:<br/>
+border-left-width:<br/>
+border-right-width:<br/>
+<br/>
+or you can just set it all in one with<br/>
+border-width: top, right, bottom,left;
+
+<h3>Border Style</h3>
+Controlling the style of the border<br/>
+for this you use border-style as the property<br/>
+border-style: solid<br/>
+-dotted<br/>
+-dashed<br/>
+-double<br/>
+-ridge<br/>
+-inset<br/>
+-outset<br/>
+-hidden/none<br/>
+<br/>
+You can choose if the border style goes for different sides by:<br/>
+border-top-style:<br/>
+border-left-style:<br/>
+border-right-style:<br/>
+border-bottom-style:<br/>
+<h3>Border Color</h3>
+You can choose the color of the borders by using <br />
+border-color: (color)<br />
+border-top-color:<br />
+border-right-color:<br />
+border-bottom-color:<br />
+border-left-color:
+<h3>Shorthand border</h3>
+This border property allows you to specify the width , style and color of the border all in one property
+<br />
+p{<br />
+width : (width);<br />
+border: (size) (size) (color);}
+<h3>Padding</h3>
+Allows you to specify how much space will be in between the content of the element and the border<br />
+you can use pixels, percentages or ems<br />
+padding: (pixels)<br />
+padding-top:<br />
+padding-right:<br />
+padding-bottom:<br />
+padding-left:
+<h3>Margin</h3>
+Allows you to specify how much space will be in between boxes<br />
+you can use pixels, percentages or ems<br />
+margin: (pixels)<br />
+margin-top:<br />
+margin-right:<br />
+margin-bottom:<br />
+margin-left:
+<h3>Change inline/block</h3>
+the display property allows you ot turn an inline element into a block-level element or vice versa, also can be used to hide an element from the page <br />
+<ul>
+    <li>
+        Inline: This causes a block-level element to act like an inline element.
+    </li>
+    <li>
+        block: This causes an inline element to act like a block-level element
+    </li>
+    <li>
+        inline-block: This causes a block-level element to flow like an inline element, while retaining other features of a block-level element
+    </li>
+    <li>
+        none: This hides an element from the page. in this case the element acts as though it is not on the page at all (although a user could still see the content of the box <br />if they used the view source option in their browser)<br />
+    </li>
+</ul>
+<h3>Hiding boxes</h3>
+The visibility property allows you to hide boxes from users, but it leaves a space where the element would have been<br />
+visibility: hidden - this hides tht element<br />
+visibility: visible - this shows the element
+<h3>Border Images</h3>
+The border-image property applies an image to the border of any box.<br />
+It takes three pieces of information:<br />
+<ol>
+    <li>The URL of the image</li>
+    <li>Where to slice the image</li>
+    <li>What to do with the straight edges; the possible values are:<br />
+    Stretch- Stretches the images<br />
+    Repeat- repeat the image<br />
+    Round- like repeat but if the tiles do not fit exactly, scaled the tile image so they will</li>
+</ol>
+
+<h3>Box Shadows</h3>
+The box-shadow property allows you to add a drop shadow around a box.<br />
+It consists of 5 parts Horizontal Offset, Vertical Offset, Blur Distance, Spread of Shadow, And Color.<br />
+bos-shadow (HO) (VO) (BD) (SS) (C)<br />
+first 4 are pixels<br />
+color is hash code
+
+<h3>Border Radius</h3>
+<h4>Rounded Corner</h4>
+border-top-right-radius:<br />
+border-bottom-right-radius:<br />
+border-top-left-radius:<br />
+border-bottom-left-radius:<br />
+You can also assign all the radius values in one statement stating from top and then in a clockwise fashion,<br />
+border-radius: (top) (right) (bottom) (left)
+<h4>Elliptical Shapes</h4>
+You can make more complex shapes but specifying different horizontal and vertical parts for each value<br />
+border-bottom-right-radius: 80px 50px;
+<h2>Lists, Tables, and Forms</h2>
+<h3>Bullet Point Styles</h3>
+The list-style-type element allows you to control the shape or style of a bullet point it can be applied to ol ul and li elements <br />
+Unordered List can use the following values:
+<ol>
+    <li>none</li>
+    <li>disc</li>
+    <li>circle</li>
+    <li>square</li>
+</ol>
+Ordered Lists can use the following values:
+<ol>
+    <li>decimal</li>
+    <li>decimal-leading-zero</li>
+    <li>lower-alpha</li>
+    <li>upper-alpha</li>
+    <li>lower-roman</li>
+    <li>upper-roman</li>
+</ol>
+
+<h2>Images For Bullets</h2>
+THe list-style-image element allows you to put an image as a bullet point in a list<br />
+list-style-image: url("URL.img");
+
+<h2>Positioning the Marker</h2>
+The list-style-position element allows you to specify the positioning of a marker<br />
+it can either take a outside or inside as the value
+<h2>List Shorthand</h2>
+You can combine the following two elements into one by using<br />
+list-style: (position) (style)
+<h2>Table Properties</h2>
+This is a list of all the Table Properties
+<dl>
+    <dt>width</dt>
+    <dd>Sets the width of the table</dd>
+    <dt>padding</dt>
+    <dd>Sets the space between the border of each table cell and its content</dd>
+    <dt>text-transform</dt>
+    <dd>Converts the content of the table headers to uppercase</dd>
+    <dt>letter-spacing, font size</dt>
+    <dd>Adds additional styling to the content of the table headers</dd>
+    <dt>border-top, border-bottom</dt>
+    <dd>Sets borders above and below the table headers</dd>
+    <dt>text-align</dt>
+    <dd>Aligns the writing to the left of some table cells and to the right of the others</dd>
+    <dt>background-color</dt>
+    <dd>Changes the background color of the alternating table rows</dd>
+    <dt>:hover</dt>
+    <dd>Highlights a table row when a user's mouse goes over it</dd>
+</dl>
+<h2>Border on Empty Cells</h2>
+the empty-cells elements specifies what you want to happen to elements that are empty<br />
+you can assign 3 variables to this element<br />
+<ol>
+    <li>show-Shows the borders of any empty cells</li>
+    <li>hide-Hides the borders of any empty cells</li>
+    <li>inherit-If you have one table nested inside another, the</li>
+</ol>
+<h2>Gaps Between Cells</h2>
+The border-spacing elements is used to control the amount of space between the cells in a table <br />
+You use pixels usually for this element and can specify 2 values one for horizontal and one for vertical<br />
+The border-collapse element is used to collapse adjacent borders<br />
+You can either use collapse of separate as the values depending on which one you want
+<h2>Styling Forms</h2>
+<h3>Styling Text Inputs</h3>
+<h3>Styling Submit Buttons</h3>
+<h3>Styling Fieldsets & Legends</h3>
+<h3>Styling Cursors</h3>
+<h2>Layout</h2>
+
+</p>
+
+
+
+</body>
+</html>

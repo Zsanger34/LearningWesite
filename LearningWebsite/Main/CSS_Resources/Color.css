@@ -1,0 +1,12 @@
+#backg{
+    background-color: #46fffc;
+    }
+#Opac{
+    opacity: .5;
+}
+#HSL{
+    background-color: hsl(0,0%,0%);
+}
+#HSLA{
+    background-color: hsl(0,0%,0%,.5);
+}
