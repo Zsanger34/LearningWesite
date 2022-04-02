@@ -1,0 +1,113 @@
+#Backg{
+    background-color:rgb(0,1,1);
+    font-family: arial, serif;
+}
+.navbar{
+    position: absolute;
+}
+a, #Logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-style: normal;
+    word-spacing: -1px;
+    left:40px;
+    top:4%;
+}
+#zac {
+color:orange;
+}
+
+.dropdown {
+    display: flow;
+    position: fixed;
+    top: 4%;
+    left: 80%;
+    padding-right:20px;
+}
+#dropdown-button{
+    background-color: black;
+    color:white;
+    font-size: 15px;
+
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+#navcontactus{
+    display: flow;
+    position: fixed;
+    top: 3%;
+    left: 90%;
+
+}
+
+.text{
+    color: white;
+}
+
+
+#cont{
+    font-size: 15px;
+}
+.Body{
+    color:white;
+    width:420px;
+    padding-top: 150px;
+    padding-left: 30px;
+    text-align: left;
+    line-height: 25px;
+    word-spacing: 3px;
+}
+
+.ContactUs {
+    text-align: center;
+    padding-top: 200px;
+}
+#ContactText{
+    word-spacing: 3px;
+    font-size: 30px;
+}
+.button {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 656px;
+    height:55px;
+    width:150px;
+}
+
+
+
+
+
+
+
+.CodeBits{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(60,40,21,0.42);
+    padding-top: 30px
+}
