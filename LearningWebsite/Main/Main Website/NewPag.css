@@ -1,102 +1,178 @@
-#Backg{
-    background-color:rgb(0,1,1);
+:root{
+    --MainColor: rgba(251,6,0,0.62);
+    --PrimeColor:black;
+    --SecondaryColor:black
+}
+.Backg{
+    background-color: var(--PrimeColor);
     font-family: arial, serif;
+    margin: 0;
 }
 .navbar{
-    position: absolute;
-}
-a, #Logo {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-style: normal;
-    word-spacing: -1px;
-    left:40px;
-    top:4%;
-}
-#zac {
-color:orange;
+    display: grid;
+    grid-template-areas:
+    "a d d d d d c";
+    align-items:start;
+    background-color: var(--SecondaryColor);
+    grid-template-columns: 200px 200px auto;
 }
 
-.dropdown {
-    display: flow;
-    position: fixed;
-    top: 4%;
-    left: 80%;
-    padding-right:20px;
+.Logo .LogoA{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
 }
-#dropdown-button{
-    background-color: black;
+
+.zac{
+    color: var(--MainColor)
+}
+.Logo{
+    padding: 2em;
+    grid-area: a;
+}
+
+.Topics{
+    grid-area: d;
+    padding: 3em;
+}
+
+.Topics a{
+    color: white;
+    text-decoration: none;
+    padding:1em;
+}
+
+.cont{
+    font-size: 1.34em;
+}
+.SideTabs .navcontactus{
+    color: white;
+    text-decoration: none;
     color:white;
-    font-size: 15px;
-
+    float: right;
+    padding: 1em 2em 0 0;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    overflow: auto;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+.SideTabs{
+    grid-area: c;
+    padding: 2em;
 }
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.dropdown-content a {
-    display: block;
-    color: white;
-    padding: 5px;
-    text-decoration: none;
-}
-.dropdown-content a:hover {
-    color: #FFFFFF;
-    background-color: #00A4BD;
-}
-#navcontactus{
-    display: flow;
-    position: fixed;
-    top: 3%;
-    left: 90%;
-
-}
-
 .text{
     color: white;
-}
-
-
-#cont{
-    font-size: 15px;
-}
-.Body{
-    color:white;
-    width:420px;
-    padding-top: 150px;
-    padding-left: 30px;
-    text-align: left;
-    line-height: 25px;
-    word-spacing: 3px;
-}
-
-.ContactUs {
-    text-align: center;
-    padding-top: 200px;
-}
-#ContactText{
-    word-spacing: 3px;
-    font-size: 30px;
-}
-.button {
-    background-color: #ddd;
-    border: none;
-    color: black;
-    padding: 6px 20px;
-    text-align: center;
     text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 656px;
-    height:55px;
-    width:150px;
+    color:white;
+    float: right;
+    justify-content: right;
+    padding: 1em 2em 0 0;
+    margin: 0;
+}
+
+
+.Body p{
+    margin-left: 3em;
+    width:420px;
+    line-height: 20px;
+    word-spacing: 3px;
+    text-align: left;
+    color:white;
+}
+
+.Sections{
+    display: grid;
+    grid-template-areas:
+    "j a b c k"
+    "l d e f m"
+    "o g h i p";
+    align-items:start;
+    color: white;
+    text-align: center;
+
+}
+
+.Sections ul{
+    list-style: none;
+    color: white;
+}
+
+.top{
+    grid-area: b;
+    font-size: 3em;
+}
+
+.ComputerScience{
+    grid-area: d;
+    margin: 0;
+
+}
+.ComputerScience ul{
+    background-color: rgba(196, 196, 196, .1);
+    border-radius: 55px;
+    padding: 1em 1em 0 1em;
+    justify-content: center;
+    height: 20em;
+
+}
+.ComputerScience ul li{
+    font-size: 2em;
+    margin: .4em 0;
+
+}
+
+.Math{
+    grid-area: e;
+}
+.Math ul{
+    background-color: rgba(196, 196, 196, .1);
+    border-radius: 55px;
+    padding: 1em 1em 0 1em;
+    margin: 0 3em;
+    height: 20em;
+}
+.Math ul li{
+    font-size: 2em;
+    margin: .4em 0;
+}
+.Physics{
+    grid-area: f;
+
+}
+.Physics ul{
+    background-color: rgba(196, 196, 196, .1);
+    border-radius: 55px;
+    padding: 1em 1em 0 1em;
+    margin: 0 3em;
+    height: 20em;
+}
+.Physics ul li{
+    font-size: 2em;
+    margin: .4em 0;
+}
+.bottom{
+    grid-area: h;
+}
+
+
+.ContactUs{
+    display: grid;
+    margin:0;
+}
+
+.ContactUs h2{
+    margin-top: 5em;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.ContactUs a{
+    text-align: center;
+    margin-bottom: 10em;
+}
+
+.button{
+    width:10em;
+    height:5em;
+    border-radius: 20em;
 }
 
 
@@ -104,10 +180,3 @@ color:orange;
 
 
 
-
-.CodeBits{
-    width: 250px;
-    height: 250px;
-    background-color: rgba(60,40,21,0.42);
-    padding-top: 30px
-}
